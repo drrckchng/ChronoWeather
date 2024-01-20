@@ -8,7 +8,7 @@
     "start": "webpack serve --open",
     "build": "webpack"
   },
-  "author": "",
+  "author": "Derrick",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.9.1",
