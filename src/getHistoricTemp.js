@@ -1,10 +1,10 @@
 import { fetchWeatherApi } from 'openmeteo';
 
 // TODO: Take in lat long param
-export default async function getPastTemp(startDate, endDate) {
+export default async function getPastTemp(startDate, endDate, coordinates) {
   const params = {
-    "latitude": 37.5519,
-    "longitude": 126.9918,
+    "latitude": coordinates[0],
+    "longitude": coordinates[1],
     "start_date": startDate,
     "end_date": endDate,
     "hourly": "temperature_2m",
