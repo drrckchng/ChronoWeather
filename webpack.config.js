@@ -5,7 +5,9 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    getHistoricTemp: './src/getHistoricTemp.js',
+    date: './src/date.js',
+    historicalTemp: './src/historical-temp.js',
+    coordinates: './src/coordinates.js'
   },
   output: {
     filename: '[name].bundle.js',
