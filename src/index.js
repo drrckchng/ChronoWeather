@@ -1,5 +1,6 @@
 import getPastTemp from './historical-temp.js';
 import getCoordinates from './coordinates.js';
+import { getDates } from './date.js';
 
 // TODO: Upon page load, ask user for loc perms and get weather
 
@@ -7,6 +8,9 @@ const location = prompt("Enter City: ");
 const coordinates = await getCoordinates(location);
 console.log(coordinates);
 
-// TODO: Get temps of past 1, 5, 10, 20, 50, 80 years (from today)
-const temp = await getPastTemp("1940-01-21", coordinates);
-console.log(temp);
+const dates = getDates();
+
+for(let i = 0; i < dates.length; i++) {
+  const temp = await getPastTemp(dates[i], coordinates);
+  console.log(dates[i] + " " + temp);
+}
