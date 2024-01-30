@@ -1,5 +1,5 @@
-import getPastTemp from './getHistoricTemp.js';
-import getCoordinates from './getCoordinates.js';
+import getPastTemp from './historical-temp.js';
+import getCoordinates from './coordinates.js';
 
 // TODO: Upon page load, ask user for loc perms and get weather
 
