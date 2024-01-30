@@ -1,11 +1,11 @@
 import { fetchWeatherApi } from 'openmeteo';
 
-export default async function getPastTemp(startDate, endDate, coordinates) {
+export default async function getPastTemp(date, coordinates) {
   const params = {
     "latitude": coordinates[0],
     "longitude": coordinates[1],
-    "start_date": startDate,
-    "end_date": endDate,
+    "start_date": date,
+    "end_date": date,
     "hourly": "temperature_2m",
     "timezone": "Asia/Tokyo"
   };
