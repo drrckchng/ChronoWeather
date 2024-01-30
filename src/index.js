@@ -8,6 +8,8 @@ const location = prompt("Enter City: ");
 const coordinates = await getCoordinates(location);
 console.log(coordinates);
 
+// TODO: Get today's current weather
+
 const dates = getDates();
 
 for(let i = 0; i < dates.length; i++) {
