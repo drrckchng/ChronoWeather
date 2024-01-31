@@ -1,15 +1,21 @@
 import { fetchWeatherApi } from 'openmeteo';
 
-export default async function getPastTemp(date, coordinates) {
+export default async function getTemp(date, coordinates, mode) {
   const params = {
     "latitude": coordinates[0],
     "longitude": coordinates[1],
     "start_date": date,
     "end_date": date,
     "hourly": "temperature_2m",
-    "timezone": "Asia/Tokyo"
   };
-  const url = "https://archive-api.open-meteo.com/v1/archive";
+
+  let url = "";
+  if(mode === "hist") {
+    url = "https://archive-api.open-meteo.com/v1/archive";
+  } else if (mode === "today") {
+    url = "https://api.open-meteo.com/v1/forecast";
+  }
+
   const responses = await fetchWeatherApi(url, params);
 
   // Helper function to form time ranges

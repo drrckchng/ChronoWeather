@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     date: './src/date.js',
-    historicalTemp: './src/historical-temp.js',
+    temp: './src/temp.js',
     coordinates: './src/coordinates.js'
   },
   output: {

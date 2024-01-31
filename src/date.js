@@ -8,6 +8,7 @@ export function getDates() {
     30, 35, 40, 45, 50, 55,
     60, 65, 70, 75, 80];
   const dates = [];
+  dates.push(today);
   for(let i = 0; i < years.length; i++) {
     const newDate = format(sub(today, {
       years: years[i]
